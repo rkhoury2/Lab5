@@ -29,6 +29,16 @@ public class Bank {
         /*
          * Implement this function
          */
+        double accountBalance = bankAccount.getAccountBalance();
+        double newBalance = accountBalance - amount;
+        if (newBalance < 0){
+            return false;
+        }
+        else{
+            bankAccount.setAccountBalance(newBalance);
+        }
+        return true;
+
     }
 
     /**
